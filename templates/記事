@@ -1,0 +1,24 @@
+     <div class="new-article">
+            <i class="far fa-newspaper"></i>
+            <span>新着記事</span>
+          </div>
+          <div class="content">
+            <p class="meta">
+              <time>2020/08/30</time>
+            </p>
+            <h2 class="title"><a href="">デスクライト</a></h2>
+            <div class="breadcrumbs">買い物>デスクライト</div>
+            <div class="img"><a href=""></a></div>
+            <p class="description">テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります</p>
+            <div class="readMore"><a href="">続きを読む</a></div>
+          </div>
+          <div class="content">
+            <p class="meta">
+              <time>2020/08/30</time>
+            </p>
+            <h2 class="title"><a href="">iPad Pro</a></h2>
+            <div class="breadcrumbs">買い物>iPad Pro</div>
+            <div class="img"><a href=""></a></div>
+            <p class="description">テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります</p>
+            <div class="readMore"><a href="">続きを読む</a></div>
+          </div>
