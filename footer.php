@@ -34,8 +34,8 @@
     </div>
   </footer>
   <!-- js読み込み -->
-  <script src="assets/js/jquery-3.5.1.min.js"></script>
-  <script src="assets/js/script.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.5.1.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js"></script>
   <?php wp_footer(); ?>
 </body>
 </html>
