@@ -42,3 +42,11 @@ function save_extra_category_fileds($term_id)
     update_option("cat_$t_id", $cat_meta);
   }
 }
+
+// excerptの点々表示変更
+function custom_excerpt_more($more){
+  return '...';
+}
+
+// アイキャッチ画像を使用可能にする
+add_theme_support('post-thumbnails');
