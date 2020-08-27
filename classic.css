@@ -275,6 +275,28 @@ main .container article section .new-article::after {
   right: -25%;
 }
 
+main .container article section .category-title {
+  width: 80%;
+  border-bottom: 2px solid var(--black);
+  padding: 15px;
+  margin-bottom: 30px;
+  color: var(--black);
+  font-size: 2em;
+}
+
+main .container article section .category-title a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+main .container article section .category-title a:hover {
+  background-color: var(--point-color);
+}
+
+main .container article section .category-title span {
+  padding: 0 .5em;
+}
+
 main .container article section .content {
   background-color: #fff;
   margin-bottom: 30px;

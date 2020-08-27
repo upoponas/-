@@ -20,7 +20,7 @@
   <div class="menu">
     <div class="title">MENU</div>
     <nav>
-      <?php get_template_part('category'); ?>
+      <?php get_template_part('menu'); ?>
     </nav>
   </div>
   <div class="archive">

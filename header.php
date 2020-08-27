@@ -22,7 +22,7 @@
 
         </form>
       </div>
-      <?php get_template_part('category'); ?>
+      <?php get_template_part('menu'); ?>
       <div class="close-btn">閉じる</div>
     </nav>
   </header>
