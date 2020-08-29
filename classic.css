@@ -38,6 +38,7 @@ header nav {
 
 main {
   line-height: 1;
+  margin: 0;
 }
 
 main .container {
@@ -256,6 +257,7 @@ main .container article section .new-article {
   color: var(--black);
   font-size: 2em;
   position: relative;
+  background-color: var(--base-color);
 }
 
 main .container article section .new-article:before, main .container article section .new-article:after {
@@ -265,6 +267,7 @@ main .container article section .new-article:before, main .container article sec
   background-color: var(--black);
   position: absolute;
   top: 50%;
+  z-index: -1;
 }
 
 main .container article section .new-article::before {
@@ -275,13 +278,38 @@ main .container article section .new-article::after {
   right: -25%;
 }
 
-main .container article section .category-title {
-  width: 80%;
-  border-bottom: 2px solid var(--black);
-  padding: 15px;
+main .container article section .category-title-wrapper {
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
   margin-bottom: 30px;
+  width: 80%;
+}
+
+main .container article section .category-title {
+  display: inline-block;
+  padding: 30px;
   color: var(--black);
   font-size: 2em;
+  background-color: var(--base-color);
+}
+
+main .container article section .category-title:before, main .container article section .category-title:after {
+  content: '';
+  width: 50%;
+  height: 2px;
+  background-color: var(--black);
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+}
+
+main .container article section .category-title::before {
+  left: 0;
+}
+
+main .container article section .category-title::after {
+  right: 0;
 }
 
 main .container article section .category-title a {
@@ -304,7 +332,7 @@ main .container article section .content {
 }
 
 main .container article section .content .meta {
-  text-align: center;
+  text-align: right;
 }
 
 main .container article section .content .title {
@@ -660,6 +688,13 @@ footer .container-fluid {
     width: 50%;
     margin: 30px auto;
   }
+  main .category-title-wrapper {
+    width: 100% !important;
+  }
+  main .category-title-wrapper .category-title {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   main .menu {
     display: none;
   }
@@ -684,8 +719,11 @@ footer .container-fluid {
   }
   main .container aside,
   main .container article {
-    width: 90% !important;
-    margin: 0 auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  main .container aside {
+    margin-top: 30px !important;
   }
   main .container aside .author,
   main .container aside .search-form {
@@ -699,9 +737,11 @@ footer .container-fluid {
     width: 70%;
     padding: 30px 0;
     margin-bottom: 0;
+    background-color: var(--base-color);
   }
   main .container article section .new-article:before, main .container article section .new-article:after {
     width: 15%;
+    z-index: -1;
   }
   main .container article section .new-article::before {
     left: -15%;

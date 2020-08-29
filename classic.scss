@@ -5,7 +5,6 @@
   --base-color: #F2EDE5;
   --black: #333333;
 }
-
 body {
   color: var(--black);
   background-color: var(--base-color);
@@ -41,6 +40,7 @@ header {
 
 main {
   line-height: 1;
+  margin: 0;
 
   .container {
     display: flex;
@@ -273,6 +273,7 @@ main {
           color: var(--black);
           font-size: 2em;
           position: relative;
+          background-color: var(--base-color);
 
           &:before,
           &:after {
@@ -282,7 +283,7 @@ main {
             background-color: var(--black);
             position: absolute;
             top: 50%;
-
+            z-index: -1;
           }
 
           &::before {
@@ -295,24 +296,57 @@ main {
 
         }
 
-        .category-title {
-          width: 80%;
-          border-bottom:2px solid var(--black) ;
-          padding: 15px;
+        .category-title-wrapper {
+          text-align: center;
+          position: relative;
+          margin: 0 auto;
           margin-bottom: 30px;
+          width: 80%;
+
+        }
+
+        .category-title {
+          display: inline-block;
+          padding: 30px;
+
           color: var(--black);
           font-size: 2em;
-          a{
-            color:var(--black);
+          background-color: var(--base-color);
+
+          &:before,
+          &:after {
+            content: '';
+            width: 50%;
+            height: 2px;
+            background-color: var(--black);
+            position: absolute;
+            top: 50%;
+            z-index: -1;
+          }
+
+          &::before {
+            left: 0;
+          }
+
+          &::after {
+            right: 0;
+          }
+
+          a {
+            color: var(--black);
             text-decoration: none;
           }
-          a:hover{
+
+          a:hover {
             background-color: var(--point-color);
           }
-          span{
+
+          span {
             padding: 0 .5em;
           }
         }
+
+
 
         .content {
           background-color: #fff;
@@ -320,7 +354,7 @@ main {
           padding: 30px 60px;
 
           .meta {
-            text-align: center;
+            text-align: right;
           }
 
           .title {
@@ -715,6 +749,15 @@ footer {
   }
 
   main {
+    .category-title-wrapper {
+      width: 100% !important;
+
+      .category-title {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+
     .menu {
       display: none;
     }
@@ -753,12 +796,13 @@ footer {
 
       aside,
       article {
-        width: 90% !important;
-        margin: 0 auto !important;
+        width: 100% !important;
+        margin: 0 !important;
+
       }
 
       aside {
-
+        margin-top: 30px !important;
         .author,
         .search-form {
           display: none;
@@ -780,10 +824,11 @@ footer {
             width: 70%;
             padding: 30px 0;
             margin-bottom: 0;
-
+            background-color: var(--base-color);
             &:before,
             &:after {
               width: 15%;
+              z-index: -1;
             }
 
             &::before {

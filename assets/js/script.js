@@ -26,4 +26,10 @@ $(function () {
       $('.menu-icon').css('line-height', headerHeight);
     })
   }
+  if (window.matchMedia('(max-width:468px)').matches) {
+    $(function () {
+      var headerHeight = $('header').innerHeight() + 'px';
+      $('main').css('margin-top', headerHeight);
+    })
+  }
 });

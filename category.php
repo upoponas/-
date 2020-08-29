@@ -7,15 +7,21 @@
       <section>
         <div class="article-container">
             <?php if (get_category($cat)->parent) : ?>
-              <div class="category-title">
+              <div class="category-title-wrapper">
+                <div class="category-title">
                 <span><a href="<?php echo get_category_link(get_the_category()[0]->category_parent); ?>"><?php echo get_category(get_the_category()[0]->category_parent)->name; ?></a></span>
                 <i class="fas fa-chevron-right"></i>
                 <span><?php echo get_the_category()[0]->name; ?></span>
               </div>
+              </div>
+
             <?php else : ?>
-              <div class="category-title">
+              <div class="category-title-wrapper">
+                <div class="category-title">
                 <span><?php echo get_category($cat)->name ?></span>
               </div>
+              </div>
+
             <?php endif; ?>
           <?php $information = get_posts(array(
             'category' => get_the_category()[0]->cat_ID

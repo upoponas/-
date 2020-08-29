@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/classic.css">
 　<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  <?php if(is_single()): ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/single.css">
+  <?php endif; ?>
+
+  
 <?php wp_head(); ?>
 </head>
 
