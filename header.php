@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title><?php echo bloginfo('name'); ?></title>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/classic.css">
 　<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-  <?php if(is_single()): ?>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/single.css">
+  <?php if(is_singular()): ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/singular.css">
+    <!-- お問い合わせフォームcss -->
+  <?php if(is_page(159)): ?>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/contact.css">
+  <?php endif; ?>
   <?php endif; ?>
 
-  
+
 <?php wp_head(); ?>
 </head>
 

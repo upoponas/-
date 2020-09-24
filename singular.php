@@ -6,9 +6,10 @@
       <section>
         <div class="article-container">
           <p class="meta"><time><?php the_time('Y/m/d'); ?></time></p>
-          <h2 class="title"><p><?php the_title(); ?></p></h2>
+          <h1 class="title"><p><?php the_title(); ?></p></h1>
           <div class="breadcrumbs"><?php the_category(); ?></div>
-          <div class="img"><?php the_post_thumbnail(); ?></div>
+          <div class="thumbnail"><?php the_post_thumbnail(); ?></div>
+          <div class="content"><?php the_content(); ?></div>
         </div>
       </section>
     </article>

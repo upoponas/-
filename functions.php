@@ -1,17 +1,21 @@
 <?php
-function create_post_type()
-{
-  register_post_type(
-    "profile", // 投稿タイプ名の定義
-    array(
-      "label" =>  "プロフィール", // 表示する投稿タイプ名
-      "public" => true,
-      "menu_position" => 5,
-    )
-  );
-}
+
 // カスタム投稿タイプの追加
-add_action("init", "create_post_type");
+// function create_post_type()
+// {
+//   register_post_type(
+//     "profile", // 投稿タイプ名の定義
+//     array(
+//       "label" =>  "プロフィール", // 表示する投稿タイプ名
+//       "public" => true,
+//       "menu_position" => 5,
+//     )
+//   );
+// }
+// add_action("init", "create_post_type");
+
+
+
 
 //投稿カテゴリ編集項目追加
 add_action('edit_category_form_fields', 'extra_category_fields');
@@ -43,10 +47,14 @@ function save_extra_category_fileds($term_id)
   }
 }
 
+
+
+
 // excerptの点々表示変更
 function custom_excerpt_more($more){
   return '...';
 }
+add_filter('excerpt_more','custom_excerpt_more');
 
 // アイキャッチ画像を使用可能にする
 add_theme_support('post-thumbnails');

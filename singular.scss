@@ -1,0 +1,148 @@
+:root {
+  --main-color: #D977C8;
+  --sub-color: #732D67;
+  --point-color: #ECF229;
+  --base-color: #F2EDE5;
+  --black: #333333;
+}
+
+.article-container {
+  background-color: #fff;
+  padding: 15px 0;
+
+  .meta {
+    text-align: right;
+    padding: 0 15px;
+
+  }
+
+  .title {
+    display: block;
+    text-align: center;
+    padding: 0 15px;
+
+
+    p {
+      font-size: 1.7em;
+      padding: 20px;
+      border-bottom: 4px solid var(--main-color);
+      display: inline-block;
+      margin-bottom: 0px !important;
+    }
+  }
+
+
+  .breadcrumbs {
+    text-align: center;
+    margin-top: 30px;
+    padding: 0 15px;
+
+
+    ul {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+
+      a {
+        color: var(--black);
+        text-decoration: none;
+      }
+
+      a:hover {
+        border-bottom: 2px solid var(--black);
+      }
+
+      li:not(:first-of-type)::after {
+        font-family: 'Font Awesome 5 Free';
+        content: '\f0da';
+        height: 1em;
+        padding: 0 .5em;
+        color: var(--black);
+        font-weight: 900;
+      }
+    }
+  }
+
+  .thumbnail {
+    width: 100%;
+    margin-top: 10px;
+    height: auto;
+    overflow: hidden;
+
+
+    img {
+      width: 100%;
+    }
+  }
+
+  h2 {
+    margin-top: 60px;
+    padding: 20px 40px;
+    border-left: 9px solid var(--sub-color);
+    background-color: #f7f7f7;
+    line-height: 40px;
+    font-size: 25px;
+  }
+
+  h3 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    padding: 0 16px;
+    font-size: 20px;
+    border-left: 9px solid var(--sub-color);
+    line-height: 2;
+  }
+
+  p {
+    margin-bottom: 60px;
+    line-height: 2;
+  }
+
+  p.point {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 600;
+
+    i {
+      color: var(--main-color);
+    }
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .content {
+    font-size: 1.1em;
+    padding: 30px 75px;
+    strong{
+      font-weight: 600;
+      font-size: 1.2em;
+    }
+    div.box {
+      background-color: #e7e7e7;
+      padding: 40px 10px 36px 40px;
+      margin-bottom: 40px;
+      border: 2px dashed black;
+      line-height: 3;
+    }
+
+    ul {
+      padding: 40px 10px 36px 40px;
+      border: 2px dashed var(--sub-color);
+      background-color: #D977C822;
+      margin-bottom: 40px;
+      list-style: square;
+
+      li {
+        margin-bottom: 10px;
+        line-height: 2;
+      }
+    }
+  }
+}

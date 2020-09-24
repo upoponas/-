@@ -45,9 +45,10 @@ main {
   .container {
     display: flex;
     max-width: 1300px;
+    margin: 0 auto;
 
     aside {
-      margin: 2.5%;
+      margin: 2.5% 2%;
       width: 30%;
 
       .author {
@@ -140,7 +141,6 @@ main {
         }
 
       }
-
       .menu {
         background-color: #fff;
         margin-top: 30px;
@@ -256,8 +256,8 @@ main {
     }
 
     article {
-      margin: 2.5%;
-      width: 60%;
+      margin: 2.5% 2% 2.5% 0;
+      width: 64%;
 
       section {
 
@@ -408,13 +408,13 @@ main {
           }
 
           .img {
-            width: 100%;
-            height: 300px;
+            max-width: 100%;
             margin-top: 10px;
             overflow: hidden;
 
             img {
               width: 100%;
+              height: auto;
             }
           }
 
@@ -613,6 +613,11 @@ footer {
   }
 }
 
+.sorry{
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 1.5em;
+}
 
 // レスポンシブデザイン
 @media screen and(max-width:1024px) {
@@ -758,9 +763,6 @@ footer {
       }
     }
 
-    .menu {
-      display: none;
-    }
 
     aside {
       .author {
@@ -788,6 +790,9 @@ footer {
         margin-left: 20%;
       }
     }
+  }
+  .menu {
+    display: none;
   }
 
   main {
